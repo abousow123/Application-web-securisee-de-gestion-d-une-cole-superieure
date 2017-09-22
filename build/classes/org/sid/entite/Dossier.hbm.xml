@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 21, 2017 9:39:14 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="org.sid.entite.Dossier" table="DOSSIER">
+        <id name="codedossier" type="java.lang.String">
+            <column name="CODEDOSSIER" />
+            <generator class="assigned" />
+        </id>
+        <property name="date_creation" type="java.util.Date">
+            <column name="DATE_CREATION" />
+        </property>
+        <property name="url" type="java.lang.String">
+            <column name="URL" />
+        </property>
+        <many-to-one name="etudiant" class="org.sid.entite.etudiant" fetch="join">
+            <column name="ETUDIANT" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 21, 2017 9:39:14 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="org.sid.entite.Absence" table="ABSENCE">
+        <id name="type" type="java.lang.String">
+            <column name="TYPE" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="coursB" class="org.sid.entite.cours" fetch="join">
+            <column name="COURSB" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

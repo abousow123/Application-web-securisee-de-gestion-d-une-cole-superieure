@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 21, 2017 9:39:14 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="org.sid.entite.classe" table="CLASSE">
+        <id name="codeclasse" type="java.lang.String">
+            <column name="CODECLASSE" />
+            <generator class="assigned" />
+        </id>
+        <property name="lbelle_classe" type="java.lang.String">
+            <column name="LBELLE_CLASSE" />
+        </property>
+        <property name="nombree_etudiant" type="int">
+            <column name="NOMBREE_ETUDIANT" />
+        </property>
+        <property name="type" type="java.lang.String">
+            <column name="TYPE" />
+        </property>
+        <bag name="maquette" table="MAQUETTE" inverse="false" lazy="true" access="field">
+            <key>
+                <column name="CODECLASSE" />
+            </key>
+            <one-to-many class="org.sid.entite.maquette" />
+        </bag>
+        <bag name="emplois_du_temps" table="EMPLOIS_DU_TEMPS" inverse="false" lazy="true" access="field">
+            <key>
+                <column name="CODECLASSE" />
+            </key>
+            <one-to-many class="org.sid.entite.Emplois_du_temps" />
+        </bag>
+        <many-to-one name="filiere" class="org.sid.entite.filiere" fetch="join">
+            <column name="FILIERE" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
