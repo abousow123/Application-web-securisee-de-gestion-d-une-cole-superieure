@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Application-web-securisee-de-gestion-d-une-cole-superieure">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="Application-web-securisee-de-gestion-d-une-cole-superieure"/>
+        <property name="java-output-path" value="/Application-web-securisee-de-gestion-d-une-cole-superieure/build/classes"/>
+    </wb-module>
+</project-modules>

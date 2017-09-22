@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 21, 2017 9:39:14 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="org.sid.entite.paiement" table="PAIEMENT">
+        <id name="codepaiement" type="java.lang.String">
+            <column name="CODEPAIEMENT" />
+            <generator class="assigned" />
+        </id>
+        <property name="couverture" type="java.lang.String">
+            <column name="COUVERTURE" />
+        </property>
+        <property name="scolarite" type="java.lang.String">
+            <column name="SCOLARITE" />
+        </property>
+        <property name="typedepaiement" type="java.lang.String">
+            <column name="TYPEDEPAIEMENT" />
+        </property>
+        <property name="date_paiement" type="java.lang.String">
+            <column name="DATE_PAIEMENT" />
+        </property>
+        <property name="annee" type="java.lang.String">
+            <column name="ANNEE" />
+        </property>
+        <one-to-one name="facture" class="org.sid.entite.facture"></one-to-one>
+    </class>
+</hibernate-mapping>

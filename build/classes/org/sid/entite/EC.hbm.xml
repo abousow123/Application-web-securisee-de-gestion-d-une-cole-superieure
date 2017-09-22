@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 21, 2017 9:39:14 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="org.sid.entite.EC" table="EC">
+        <id name="codematiere" type="java.lang.String">
+            <column name="CODEMATIERE" />
+            <generator class="assigned" />
+        </id>
+        <property name="libelle_matiere" type="java.lang.String">
+            <column name="LIBELLE_MATIERE" />
+        </property>
+        <property name="quantumhoraire" type="java.lang.String">
+            <column name="QUANTUMHORAIRE" />
+        </property>
+        <property name="credit" type="int">
+            <column name="CREDIT" />
+        </property>
+        <property name="tp" type="java.lang.String">
+            <column name="TP" />
+        </property>
+        <property name="td" type="java.lang.String">
+            <column name="TD" />
+        </property>
+        <property name="tpe" type="java.lang.String">
+            <column name="TPE" />
+        </property>
+        <property name="coursmagistraux" type="java.lang.String">
+            <column name="COURSMAGISTRAUX" />
+        </property>
+        <bag name="cours" table="COURS" inverse="false" lazy="true">
+            <key>
+                <column name="CODEMATIERE" />
+            </key>
+            <one-to-many class="org.sid.entite.cours" />
+        </bag>
+    </class>
+</hibernate-mapping>
