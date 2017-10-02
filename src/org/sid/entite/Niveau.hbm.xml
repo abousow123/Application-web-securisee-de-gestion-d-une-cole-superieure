@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Sep 21, 2017 9:39:14 PM by Hibernate Tools 3.5.0.Final -->
+<!-- Generated Oct 2, 2017 2:41:10 AM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <class name="org.sid.entite.Niveau" table="NIVEAU">
         <id name="idniveau" type="int">
@@ -11,11 +11,11 @@
         <property name="libelle" type="java.lang.String">
             <column name="LIBELLE" />
         </property>
-        <bag name="classe" table="CLASSE" inverse="false" lazy="true">
+        <set name="classes" table="CLASSE" inverse="false" lazy="true">
             <key>
                 <column name="IDNIVEAU" />
             </key>
-            <one-to-many class="org.sid.entite.classe" />
-        </bag>
+            <one-to-many class="org.sid.entite.Classe" />
+        </set>
     </class>
 </hibernate-mapping>
