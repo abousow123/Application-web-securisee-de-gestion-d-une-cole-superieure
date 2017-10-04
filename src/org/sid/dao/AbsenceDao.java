@@ -15,7 +15,7 @@ import org.sid.util.HibernateUtil;
  *
  * @author Lenovo
  */
-public abstract class AbsenceDao implements IAbsenceDao {
+public class AbsenceDao implements IAbsenceDao {
 
     @Override
     public void addAbsence(Absence abs) {

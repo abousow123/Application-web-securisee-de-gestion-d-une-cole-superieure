@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id ="absence"    class="org.sid.entite.Absence"></bean>
+   <bean id ="administrateur"  class="org.sid.entite.Administrateur"></bean>
+   <bean id ="classe"  class="org.sid.entite.Classe"></bean>
+   <bean id ="comptable"  class="org.sid.entite.Comptable"></bean>
+   <bean id ="cours"  class="org.sid.entite.Cours"></bean>
+   <bean id ="domaine"  class="org.sid.entite.Domaine"></bean>
+   <bean id ="ec"  class="org.sid.entite.Ec"></bean>
+   <bean id ="emplois_du_temps"  class="org.sid.entite.EmploisDuTemps"></bean>
+   <bean id ="enseignant"  class="org.sid.entite.Enseignant"></bean>
+   <bean id ="enseignant_responsable"  class="org.sid.entite.EnseignantResponsable"></bean>
+   <bean id ="etablissement"  class="org.sid.entite.Etablissement"></bean>
+   <bean id ="etudiant"  class="org.sid.entite.Etudiant"></bean>
+   <bean id ="evaluer"  class="org.sid.entite.Evaluer"></bean>
+   <bean id ="facture"  class="org.sid.entite.Facture"></bean>
+   <bean id ="filiere"  class="org.sid.entite.Filiere"></bean>
+   <bean id ="maquette"  class="org.sid.entite.Maquette"></bean>
+   <bean id ="message"  class="org.sid.entite.Message"></bean>
+   <bean id ="niveau"  class="org.sid.entite.Niveau"></bean>
+   <bean id ="paiement"  class="org.sid.entite.Paiement"></bean>
+   <bean id ="responsable"  class="org.sid.entite.Responsable"></bean>
+   <bean id ="secretaire"  class="org.sid.entite.Secretaire"></bean>
+   <bean id ="semestre"  class="org.sid.entite.Semestre"></bean>
+   <bean id ="ue"  class="org.sid.entite.Ue"></bean>
+   <bean id ="utilisateur"  class="org.sid.entite.Utilisateur"></bean>
+    
+
+</beans>
