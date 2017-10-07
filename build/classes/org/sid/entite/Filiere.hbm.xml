@@ -24,4 +24,9 @@
             <one-to-many class="org.sid.entite.Classe" />
         </set>
     </class>
+    
+    
+    
 </hibernate-mapping>
+
+

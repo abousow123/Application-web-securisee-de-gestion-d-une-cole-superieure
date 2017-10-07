@@ -32,6 +32,11 @@ public class Utilisateur  implements java.io.Serializable {
      private Comptable comptable;
      private Enseignant enseignant;
      private String sms,selection;
+     
+     
+     public void initt(){
+         System.out.println("Hello Abou SOW");
+     }
 
     public String getSms() {
         return sms;

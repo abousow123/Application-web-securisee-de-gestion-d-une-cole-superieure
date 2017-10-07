@@ -74,7 +74,7 @@ public class UtilisateurBean implements Serializable{
      
     private static BeanFactory factory;
 	static{
-		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/spring/springBeans.xml"});
+		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/WEB-INF/springBeans.xml"});
 		factory = context;
 	}
 

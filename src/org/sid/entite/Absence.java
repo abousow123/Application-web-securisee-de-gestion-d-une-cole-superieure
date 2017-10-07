@@ -29,6 +29,12 @@ public class Absence  implements java.io.Serializable {
        this.etudiant = etudiant;
        this.type = type;
     }
+    
+    
+    public void init(){
+    	System.out.println("Initialisation");
+    }
+   
    
     public AbsenceId getId() {
         return this.id;

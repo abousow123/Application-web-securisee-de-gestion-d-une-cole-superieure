@@ -46,7 +46,9 @@ public class AbsenceBean implements Serializable{
        this.etudiant = etudiant;
        this.type = type;
     }
-   
+    
+    
+  
     public AbsenceId getId() {
         return this.id;
     }
