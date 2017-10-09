@@ -56,12 +56,12 @@ public class ResponsableBean implements Serializable{
     public void setUtilisateur(Utilisateur utilisateur) {
         this.utilisateur = utilisateur;
     }
-     
-     private static BeanFactory factory;
-	static{
-		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/WEB-INF/springBeans.xml"});
-		factory = context;
-	}
+//     
+//     private static BeanFactory factory;
+//	static{
+//		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/WEB-INF/springBeans.xml"});
+//		factory = context;
+//	}
 
     public ResponsableBean() {
     }
@@ -187,7 +187,8 @@ public class ResponsableBean implements Serializable{
     public void ajouterUser(){
         UtilisateurDao userDao = new UtilisateurDao();
         ResponsableDao resDao= new ResponsableDao();
-        Utilisateur user=(Utilisateur)factory.getBean("utilisateur");
+       // Utilisateur user=(Utilisateur)factory.getBean("utilisateur");
+        Utilisateur user = new Utilisateur() ;
         user.setCodeutilisateur("500");
         user.setNom(nom);
         user.setPrenom(prenom);
@@ -203,7 +204,8 @@ public class ResponsableBean implements Serializable{
         user.setLogin(login);
         user.setPassword(password);
         if(userDao.addUtilisateur(user)){
-            Responsable res=(Responsable) factory.getBean("responsable");
+           // Responsable res=(Responsable) factory.getBean("responsable");
+        	Responsable res = new Responsable() ;
             res.setCodeutilisateur(userDao.selectionUsersByCall(telephone).getCodeutilisateur());
             user.setCodeutilisateur(userDao.selectionUsersByCall(telephone).getCodeutilisateur());
             res.setUtilisateur(user);

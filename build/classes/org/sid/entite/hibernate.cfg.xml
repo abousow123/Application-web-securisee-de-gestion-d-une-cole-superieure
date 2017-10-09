@@ -11,6 +11,32 @@
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         
         
+        <mapping resource="org/sid/entite/Semestre.hbm.xml"/>
+         <mapping resource="org/sid/entite/Absence.hbm.xml"/>
+    <mapping resource="org/sid/entite/Administrateur.hbm.xml"/>
+    <mapping resource="org/sid/entite/Dossier.hbm.xml"/>
+    <mapping resource="org/sid/entite/Etudiant.hbm.xml"/>
+    <mapping resource="org/sid/entite/Facture.hbm.xml"/>
+    <mapping resource="org/sid/entite/Cours.hbm.xml"/>
+    <mapping resource="org/sid/entite/Message.hbm.xml"/>
+    <mapping resource="org/sid/entite/Secretaire.hbm.xml"/>
+    <mapping resource="org/sid/entite/Maquette.hbm.xml"/>
+    <mapping resource="org/sid/entite/Classe.hbm.xml"/>
+    <mapping resource="org/sid/entite/Comptable.hbm.xml"/>
+    <mapping resource="org/sid/entite/Etablissement.hbm.xml"/>
+    <mapping resource="org/sid/entite/EmploisDuTemps.hbm.xml"/>
+    <mapping resource="org/sid/entite/Paiement.hbm.xml"/>
+    <mapping resource="org/sid/entite/Filiere.hbm.xml"/>
+    <mapping resource="org/sid/entite/Evaluer.hbm.xml"/>
+    <mapping resource="org/sid/entite/Niveau.hbm.xml"/>
+    <mapping resource="org/sid/entite/Ue.hbm.xml"/>
+    <mapping resource="org/sid/entite/Ec.hbm.xml"/>
+    <mapping resource="org/sid/entite/EnseignantResponsable.hbm.xml"/>
+    <mapping resource="org/sid/entite/Responsable.hbm.xml"/>
+    <mapping resource="org/sid/entite/Utilisateur.hbm.xml"/>
+    <mapping resource="org/sid/entite/Domaine.hbm.xml"/>
+    <mapping resource="org/sid/entite/Enseignant.hbm.xml"/>
+        
         
         
     </session-factory>

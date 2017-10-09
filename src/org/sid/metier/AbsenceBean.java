@@ -33,6 +33,10 @@ public class AbsenceBean implements Serializable{
 
     public AbsenceBean() {
     }
+    
+    public void init() {
+		System.out.println("Hello");
+	}
 
 	
     public AbsenceBean(AbsenceId id, Cours cours, Etudiant etudiant) {
@@ -46,6 +50,7 @@ public class AbsenceBean implements Serializable{
        this.etudiant = etudiant;
        this.type = type;
     }
+    
     
     
   
@@ -76,6 +81,7 @@ public class AbsenceBean implements Serializable{
     
     public void setType(String type) {
         this.type = type;
+        System.out.println("Vous etes");
     }
     
     public void ajouterAbsence(){

@@ -107,11 +107,11 @@ public class EnseignantBean implements Serializable{
         this.selection = selection;
     }
      
-     private static BeanFactory factory;
-	static{
-		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/WEB-INF/springBeans.xml"});
-		factory= context;      
-	}
+//     private static BeanFactory factory;
+//	static{
+//		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/WEB-INF/springBeans.xml"});
+//		factory= context;      
+//	}
      
       public EnseignantBean() {
     }
@@ -235,7 +235,8 @@ public class EnseignantBean implements Serializable{
     public void ajouterUser(){
         UtilisateurDao userDao = new UtilisateurDao();
         EnseignantDao ensDao= new EnseignantDao();
-        Utilisateur user=(Utilisateur)factory.getBean("utilisateur");
+        //Utilisateur user=(Utilisateur)factory.getBean("utilisateur");
+        Utilisateur user= new Utilisateur() ;
         user.setCodeutilisateur("700");
         user.setNom(nom);
         user.setPrenom(prenom);
@@ -251,7 +252,8 @@ public class EnseignantBean implements Serializable{
         user.setLogin(login);
         user.setPassword(password);
         if(userDao.addUtilisateur(user)){
-            Enseignant ens=(Enseignant) factory.getBean("enseignant");
+            //Enseignant ens=(Enseignant) factory.getBean("enseignant");
+        	Enseignant ens= new Enseignant() ;
             ens.setCodeutilisateur(userDao.selectionUsersByCall(telephone).getCodeutilisateur());
             user.setCodeutilisateur(userDao.selectionUsersByCall(telephone).getCodeutilisateur());
             ens.setGrade(grade);
@@ -265,7 +267,8 @@ public class EnseignantBean implements Serializable{
     
      public void modifierUsers() {
         UtilisateurDao userDao = new UtilisateurDao();
-        Utilisateur user=(Utilisateur)factory.getBean("utilisateur");
+       // Utilisateur user=(Utilisateur)factory.getBean("utilisateur");
+        Utilisateur user= new Utilisateur() ;
         user.setCodeutilisateur(codeutilisateur);
         user.setNom(nom);
         user.setPrenom(prenom);

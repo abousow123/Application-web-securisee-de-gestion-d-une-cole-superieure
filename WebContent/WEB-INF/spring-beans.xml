@@ -26,7 +26,10 @@
    <bean id ="secretaire"  class="org.sid.entite.Secretaire"></bean>
    <bean id ="semestre"  class="org.sid.entite.Semestre"></bean>
    <bean id ="ue"  class="org.sid.entite.Ue"></bean>
-   <bean id ="utilisateur"  class="org.sid.entite.Utilisateur" init-method="initt"></bean>
+   <bean id ="utilisateur"  class="org.sid.entite.Utilisateur"></bean>
+    <bean id ="AbsenceBean"  class="org.sid.metier.AbsenceBean" init-method="init">
+    <property name="type" ref="type"></property>
+    </bean>
    
    
    

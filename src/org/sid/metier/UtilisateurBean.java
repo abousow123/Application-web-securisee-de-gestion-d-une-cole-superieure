@@ -72,11 +72,11 @@ public class UtilisateurBean implements Serializable{
         this.selection = selection;
     }
      
-    private static BeanFactory factory;
-	static{
-		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/WEB-INF/springBeans.xml"});
-		factory = context;
-	}
+//    private static BeanFactory factory;
+//	static{
+//		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/WEB-INF/springBeans.xml"});
+//		factory = context;
+//	}
 
     public UtilisateurBean() {
     }
@@ -238,7 +238,8 @@ public class UtilisateurBean implements Serializable{
     
     public void ajouterUser(){
         UtilisateurDao userDao = new UtilisateurDao();
-        Utilisateur user = (Utilisateur)factory.getBean("utilisateur");
+        //Utilisateur user = (Utilisateur)factory.getBean("utilisateur");
+        Utilisateur user = new Utilisateur() ;
         user.setNom(nom);
         user.setPrenom(prenom);
         user.setDatedenaissance(datedenaissance);
@@ -259,7 +260,8 @@ public class UtilisateurBean implements Serializable{
     
     public void modifierUsers() {
         UtilisateurDao userDao = new UtilisateurDao();
-        Utilisateur user=(Utilisateur)factory.getBean("utilisateur");
+       // Utilisateur user=(Utilisateur)factory.getBean("utilisateur");
+        Utilisateur user = new Utilisateur() ;
         user.setCodeutilisateur(codeutilisateur);
         user.setNom(nom);
         user.setPrenom(prenom);

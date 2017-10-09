@@ -48,11 +48,11 @@ public class AdministrateurBean implements Serializable{
         this.sms = sms;
     }
      
-     private static BeanFactory factory;
-	static{
-		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/WEB-INF/springBeans.xml"});
-		factory = context;
-	}
+//     private static BeanFactory factory;
+//	static{
+//		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/WEB-INF/springBeans.xml"});
+//		factory = context;
+//	}
 
     public AdministrateurBean() {
     }
@@ -178,7 +178,8 @@ public class AdministrateurBean implements Serializable{
     public void ajouterUser(){
         UtilisateurDao userDao = new UtilisateurDao();
         AdministrateurDao adminDao= new AdministrateurDao();
-        Utilisateur user=(Utilisateur)factory.getBean("utilisateur");
+       // Utilisateur user=(Utilisateur)factory.getBean("utilisateur");
+        Utilisateur user = new Utilisateur() ;
         user.setCodeutilisateur("900");
         user.setNom(nom);
         user.setPrenom(prenom);
@@ -194,7 +195,8 @@ public class AdministrateurBean implements Serializable{
         user.setLogin(login);
         user.setPassword(password);
          if(userDao.addUtilisateur(user)){
-            Administrateur admin=(Administrateur) factory.getBean("administrateur");
+          //  Administrateur admin=(Administrateur) factory.getBean("administrateur");
+        	 Administrateur admin= new Administrateur() ;
             admin.setCodeutilisateur(userDao.selectionUsersByCall(telephone).getCodeutilisateur());
             user.setCodeutilisateur(userDao.selectionUsersByCall(telephone).getCodeutilisateur());
             admin.setUtilisateur(user);

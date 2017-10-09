@@ -75,11 +75,11 @@ public class EtudiantBean implements Serializable{
         this.responsableclasse = responsableclasse;
     }
      
-     private static BeanFactory factory;
-	static{
-		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/WEB-INF/springBeans.xml"});
-		factory = context;
-	}
+//     private static BeanFactory factory;
+//	static{
+//		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/WEB-INF/springBeans.xml"});
+//		factory = context;
+//	}
 
     public EtudiantBean() {
     }
@@ -204,7 +204,8 @@ public class EtudiantBean implements Serializable{
     public void ajouterUser(){
         UtilisateurDao userDao = new UtilisateurDao();
         EtudiantDao etuDao= new EtudiantDao();
-        Utilisateur user=(Utilisateur)factory.getBean("utilisateur");
+       // Utilisateur user=(Utilisateur)factory.getBean("utilisateur");
+        Utilisateur user = new Utilisateur() ;
         user.setCodeutilisateur("kkd");
         user.setNom(nom);
         user.setPrenom(prenom);
@@ -220,7 +221,8 @@ public class EtudiantBean implements Serializable{
         user.setLogin(login);
         user.setPassword(password);
         if(userDao.addUtilisateur(user)){
-            Etudiant etu=(Etudiant) factory.getBean("etudiant");
+           // Etudiant etu=(Etudiant) factory.getBean("etudiant");
+        	Etudiant etu = new Etudiant() ;
             etu.setCodeutilisateur(userDao.selectionUsersByCall(telephone).getCodeutilisateur());
             user.setCodeutilisateur(userDao.selectionUsersByCall(telephone).getCodeutilisateur());
             etu.setClasse(classe);

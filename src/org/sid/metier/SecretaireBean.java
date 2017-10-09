@@ -49,11 +49,11 @@ public class SecretaireBean implements Serializable{
         this.sms = sms;
     }
      
-     private static BeanFactory factory;
-	static{
-		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/WEB-INF/springBeans.xml"});
-		factory = context;
-	}
+//     private static BeanFactory factory;
+//	static{
+//		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/WEB-INF/springBeans.xml"});
+//		factory = context;
+//	}
 
     public SecretaireBean() {
     }
@@ -179,7 +179,8 @@ public class SecretaireBean implements Serializable{
     public void ajouterUser(){
         UtilisateurDao userDao = new UtilisateurDao();
         SecretaireDao secretDao= new SecretaireDao();
-        Utilisateur user=(Utilisateur)factory.getBean("utilisateur");
+      //  Utilisateur user=(Utilisateur)factory.getBean("utilisateur");
+        Utilisateur user = new Utilisateur() ;
         user.setCodeutilisateur("800");
         user.setNom(nom);
         user.setPrenom(prenom);
@@ -195,7 +196,8 @@ public class SecretaireBean implements Serializable{
         user.setLogin(login);
         user.setPassword(password);
         if(userDao.addUtilisateur(user)){
-            Secretaire secret=(Secretaire) factory.getBean("secretaire");
+           // Secretaire secret=(Secretaire) factory.getBean("secretaire");
+        	Secretaire secret = new Secretaire() ;
             secret.setCodeutilisateur(userDao.selectionUsersByCall(telephone).getCodeutilisateur());
             user.setCodeutilisateur(userDao.selectionUsersByCall(telephone).getCodeutilisateur());
             secret.setUtilisateur(user);
