@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id ="absence"    class="org.sid.entite.Absence" init-method="init"></bean>
+<bean id ="absence"    class="org.sid.entite.Absence" ></bean>
    <bean id ="administrateur"  class="org.sid.entite.Administrateur"></bean>
    <bean id ="classe"  class="org.sid.entite.Classe"></bean>
    <bean id ="comptable"  class="org.sid.entite.Comptable"></bean>
@@ -30,6 +30,11 @@
     <bean id ="AbsenceBean"  class="org.sid.metier.AbsenceBean" init-method="init">
     <property name="type" ref="type"></property>
     </bean>
+    
+     <bean id ="etudiantBean"  class="org.sid.metier.EtudiantBean" >
+    </bean>
+    
+    
    
    
    

@@ -8,7 +8,7 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-	//	HibernateUtil.getSessionFactory() ;
+	HibernateUtil.getSessionFactory() ;
 
 		/*AdministrateurDao administrateurDao = new AdministrateurDao();
 
@@ -19,9 +19,9 @@ public class Test {
 		administrateurDao.addAdministrateur(new Administrateur(utilisateur));*/
 		
 
-        NiveauDao ni = new NiveauDao() ;
-        Niveau n = new Niveau(1);
-        ni.addNiveau(n);
+//        NiveauDao ni = new NiveauDao() ;
+//        Niveau n = new Niveau(1);
+//        ni.addNiveau(n);
 
 	}
 

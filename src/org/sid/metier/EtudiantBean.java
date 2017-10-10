@@ -80,6 +80,8 @@ public class EtudiantBean implements Serializable{
 //		ApplicationContext context = new ClassPathXmlApplicationContext(new String [ ] {"/WEB-INF/springBeans.xml"});
 //		factory = context;
 //	}
+    
+  //  String context = ApplicationContext.FACTORY_BEAN_PREFIX ;
 
     public EtudiantBean() {
     }
